@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.oopdevelop.lab04.HelloController"
+      alignment="CENTER" spacing="10.0">
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+    </padding>
+
+    <Label text="Enter Student Information"/>
+    <GridPane hgap="10" vgap="10">
+        <Label text="Full Name:"/>
+        <TextField fx:id="fullNameField" GridPane.columnIndex="1"/>
+
+        <Label text="Address:" GridPane.rowIndex="1"/>
+        <TextField fx:id="addressField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="City:" GridPane.rowIndex="2"/>
+        <TextField fx:id="cityField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Province:" GridPane.rowIndex="3"/>
+        <TextField fx:id="provinceField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <Label text="Postal Code:" GridPane.rowIndex="4"/>
+        <TextField fx:id="postalCodeField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+        <Label text="Phone Number:" GridPane.rowIndex="5"/>
+        <TextField fx:id="phoneNumberField" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+        <Label text="Email:" GridPane.rowIndex="6"/>
+        <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    </GridPane>
+
+    <HBox spacing="10">
+        <RadioButton text="Computer Science" fx:id="compSciRadio" toggleGroup="$majorGroup"/>
+        <RadioButton text="Business" fx:id="businessRadio" toggleGroup="$majorGroup"/>
+    </HBox>
+
+    <ComboBox fx:id="courseComboBox"/>
+    <Button text="Add Course" onAction="#onAddCourseClick"/>
+
+    <ListView fx:id="courseListView" prefHeight="200" prefWidth="200"/>
+
+    <CheckBox text="Student Council" fx:id="studentCouncilCheckBox"/>
+    <CheckBox text="Volunteer Work" fx:id="volunteerWorkCheckBox"/>
+
+    <Button text="Display" onAction="#onDisplayButtonClick"/>
+    <TextArea fx:id="outputTextArea" prefHeight="300" prefWidth="300" editable="false"/>
+</VBox>
