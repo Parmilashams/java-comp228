@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.oopdevelop.parmilashams_comp228lab5.PlayerController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- Player Management Section -->
+    <Label text="Player Management" />
+
+    <TextField fx:id="firstNameField" promptText="First Name" text="fsf" />
+    <TextField fx:id="lastNameField" promptText="Last Name" text="fhd" />
+    <TextField fx:id="addressField" promptText="Address" text="ffgh" />
+    <TextField fx:id="postalCodeField" promptText="Postal Code" text="fgf" />
+    <TextField fx:id="provinceField" promptText="Province" text="sfg" />
+    <TextField fx:id="phoneField" promptText="Phone Number" text="sfg" />
+    <Button onAction="#handleAddPlayer" text="Add Player" />
+    <Button onAction="#handleViewPlayers" text="View Players" />
+
+    <!-- Game Management Section -->
+    <Label text="Game Management" />
+    <TextField fx:id="gameTitleField" promptText="Game Title" text="fgdgghsb" />
+    <Button onAction="#handleAddGame" text="Add Game" />
+
+    <!-- Update Player Section -->
+    <Label text="Update Player" />
+    <TextField fx:id="updatePlayerIdField" promptText="Player ID" text="adaef" />
+    <TextField fx:id="updateAddressField" promptText="New Address" text="adfad" />
+    <TextField fx:id="updatePhoneField" promptText="New Phone Number" text="adfasdf" />
+    <Button onAction="#handleUpdatePlayer" text="Update Player" />
+
+    <!-- Reports Section -->
+    <Button onAction="#handleDisplayReports" text="Display Reports" />
+
+    <!-- TextArea to show the output or any messages -->
+    <TextArea fx:id="outputArea" editable="false" prefHeight="200.0" prefWidth="300.0" />
+</VBox>
